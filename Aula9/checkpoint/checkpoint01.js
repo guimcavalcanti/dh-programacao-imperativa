@@ -33,22 +33,23 @@ function microondas(comida, tempo) {
     switch(comida) {
         case 'Pipoca':
             tempo_padrao = 10;
-            return check_tempo(tempo);
+            break;
         case 'Macarrão':
             tempo_padrao = 8;
-            return check_tempo(tempo);
+            break;
         case 'Carne':
             tempo_padrao = 15;
-            return check_tempo(tempo);
+            break;
         case 'Feijão':
             tempo_padrao = 12;
-            return check_tempo(tempo);
+            break;
         case 'Brigadeiro':
             tempo_padrao = 8;
-            return check_tempo(tempo);
+            break;
         default:
             return "Prato Inexistente!";
     }
+    return check_tempo(tempo);
 }
 
 /* Escolha entre as opções: 
@@ -58,6 +59,6 @@ function microondas(comida, tempo) {
     4 - Feijão – 12 segundos (padrão);
     5 - Brigadeiro – 8 segundos (padrão);  */
 
-console.log(microondas('Brigadeiro',65));
+console.log(microondas('Brigadeiro',2));
 
 // Alunos: Daniel Nunes, Guilherme Martins, Lucas Anselmo e Thais Lino
