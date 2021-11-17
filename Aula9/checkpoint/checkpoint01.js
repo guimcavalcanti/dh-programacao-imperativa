@@ -19,14 +19,12 @@ function microondas(comida, tempo) {
     let tempo_padrao = 0;
 
     function check_tempo(tempo) {
-        if(tempo >= tempo_padrao && tempo < (tempo_padrao*2)) {
-            return "Prato pronto, bom apetite!";
-        } else if(tempo >= (tempo_padrao*2) && tempo < (tempo_padrao*3))  {
-            return "Sua comida queimou! Prato pronto, bom apetite!";
-        } else if(tempo >= (tempo_padrao*3)) {
-            return "KABUMMM! Sua comida pipocou e sujou todo o microondas.";
-        } else {
-            return "Tempo Insuficiente!";
+        if(tempo > 3*tempo_padrao) {
+            console.log("KABUMMM! Sua comida pipocou e sujou todo o microondas.");
+        } else if(tempo > 2*tempo_padrao) {
+            console.log("Sua comida queimou!");
+        } else if(tempo < tempo_padrao) {
+            console.log("Tempo Insuficiente!");
         } 
     }
 
@@ -49,7 +47,8 @@ function microondas(comida, tempo) {
         default:
             return "Prato Inexistente!";
     }
-    return check_tempo(tempo);
+    check_tempo(tempo);
+    console.log("Prato pronto, bom apetite!");
 }
 
 /* Escolha entre as opções: 
@@ -59,6 +58,6 @@ function microondas(comida, tempo) {
     4 - Feijão – 12 segundos (padrão);
     5 - Brigadeiro – 8 segundos (padrão);  */
 
-console.log(microondas('Brigadeiro',2));
+microondas('Brigadeiro',99);
 
 // Alunos: Daniel Nunes, Guilherme Martins, Lucas Anselmo e Thais Lino
