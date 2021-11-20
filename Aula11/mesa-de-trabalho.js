@@ -3,7 +3,7 @@ let filmes = ["star wars", "totoro", "rocky", "pulp fiction", "a vida é bela"];
 console.log("---- Convertendo em Maiúsculas com For e While ----\n")
 
 function converterMaiusculasFor(array) {
-    for (contador = 0; contador <= array.length - 1; contador++) {
+    for (let contador = 0; contador <= array.length - 1; contador++) {
         array[contador] = array[contador].toUpperCase();
     }
     return array;
@@ -30,7 +30,7 @@ filmes2.pop();
 
 function passagemDeElementosFor(array1, array2) {
     let tamanhoArray2 = array2.length;
-    for (contador = 1; contador <= tamanhoArray2; contador++) {
+    for (let contador = 1; contador <= tamanhoArray2; contador++) {
         array1.push(array2.pop().toUpperCase());
     }
     return array1;
@@ -58,7 +58,7 @@ const euroScores = [8, 10, 6, 8, 10, 6, 7, 9, 5];
 
 function compararClassificacoesFor(array1, array2) {
     let comparacoesArray1Array2 = [];
-    for (index = 0; index <= array1.length-1; index++) {
+    for (let index = 0; index <= array1.length-1; index++) {
         comparacoesArray1Array2[index] = array1[index] === array2[index];
     }
     return comparacoesArray1Array2;
