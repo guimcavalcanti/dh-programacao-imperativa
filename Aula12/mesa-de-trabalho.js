@@ -7,9 +7,9 @@ function encontrarGanhador(a, b) {
     let pontosA = 0;
     let pontosB = 0;
     for (let i = 0; i <= a.length - 1; i++) {
-        if (a[i] >= b[i]) {
+        if (a[i] > b[i]) {
             pontosA++;
-        } else if (a[i] <= b[i]) {
+        } else if (a[i] < b[i]) {
             pontosB++;
         }
     }
