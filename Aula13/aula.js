@@ -34,3 +34,30 @@ let carro3 = new Carro("Ford", "Fiesta");
 
 console.log(carro2);
 console.log(carro3);
+
+
+// JSON
+
+let pessoa = {
+    nome: 'Guilherme',
+    idade: 30,
+    altura: 1.83
+}
+
+let pessoaJson = JSON.stringify(pessoa);
+
+console.log(pessoaJson);
+
+let pessoaObjeto = JSON.parse(pessoaJson);
+
+console.log(pessoaObjeto);
+
+let listaCompras = ["pão","presunto","queijo"];
+
+let listaJson = JSON.stringify(listaCompras);
+
+console.log(listaJson);
+
+let listaObjeto = JSON.parse(listaJson);
+
+console.log(listaObjeto);
